@@ -16,9 +16,17 @@ function App() {
 
   useEffect(() => {
     fetchJobs();
-  }, []);   
+  }, []); 
+  
+  if (loading) {
+    return (
+      <section className='section loadin'>
+        <h1>loading...</h1>
+      </section>
+    );
+  }
 
-  return <h2>tabs project setup</h2>
+  return <h2>jobs</h2>
 }
 
 export default App;
